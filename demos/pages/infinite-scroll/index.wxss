@@ -1,0 +1,29 @@
+/* pages/infinite-scroll/index.wxss */
+.infinite-scroll {
+  /* position: relative; */
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+
+.list {
+  position: relative;
+}
+.list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  box-shadow: 4rpx 4rpx 18rpx 0rpx #bbb;
+  /* padding: 140rpx 0; */
+  margin: 40rpx 0;
+  height: 300rpx;
+  border-radius: 20rpx;
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,14 @@
+<view class="infinite-scroll">
+  <view class="title">15个元素实现无限滚动</view>
+  <view class="list">
+    <view
+      id="{{item.id}}"
+      class="list-item {{item.id ? 'border-element' : ''}}"
+      wx:for="{{list}}"
+      wx:key="index"
+      style="top:{{item.top}}"
+    >
+      {{item.name}}-{{item.index}}
+    </view>
+  </view>
+</view>

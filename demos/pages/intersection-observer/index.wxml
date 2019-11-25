@@ -1,0 +1,15 @@
+<view class="products">
+  
+  <view class="header"></view>
+  <view
+    class="product-item product-item_{{product.id}}"
+    wx:for="{{list}}"
+    wx:for-item="product"
+    wx:key="{{product.id}}"
+    data-product-id="{{product.id}}"
+  >
+    <view class="top">{{product.name}}</view>
+    <view class="bottom">{{product.id}}</view>
+  </view>
+  <view class="fixed"></view>
+</view>
