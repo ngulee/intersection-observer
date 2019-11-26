@@ -5,7 +5,7 @@ const SHOW_LIST_COUNT = 15;    // 页面展示的列表总数
 const UPDATE_COUNT = 10;       // 翻页每次移动的数据个数
 
 const LIST_ITEM_HEIGHT  = 340; // rpx
-const THRESHOLD = 0.5;         // 阈值
+const THRESHOLD = 0.2;         // 阈值
 
 
 const TOP_ID = 'top';
