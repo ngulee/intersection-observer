@@ -1,8 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/intersection-observer/index",
     "pages/infinite-scroll/index"
   ],
   "window": {
