@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "nav-item": "./__components/link-menu-nav-item/index",
+    "content-item": "./__components/link-menu-content-item/index"
+  }
+}

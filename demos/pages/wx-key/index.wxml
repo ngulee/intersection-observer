@@ -1,0 +1,8 @@
+<view >
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{list1}}" wx:key="name">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+  </checkbox-group>
+  <view bind:tap="onChange1">洗牌</view>
+</view>

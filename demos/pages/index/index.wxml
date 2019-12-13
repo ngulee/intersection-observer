@@ -4,5 +4,23 @@
     <navigator class="" target="" url="/pages/infinite-scroll/index" open-type="navigate">
       <button size="default">InfiniteScroll</button>
     </navigator>
+    <navigator class="" target="" url="/pages/exposure-demos/index" open-type="navigate">
+      <button size="default">exposure-demos</button>
+    </navigator>
+    <navigator class="" target="" url="/pages/link-tab-demos/index" open-type="navigate">
+      <button size="default">link-tab-demos</button>
+    </navigator>
+    <navigator class="" target="" url="/pages/wx-key/index" open-type="navigate">
+      <button size="default">wx-key</button>
+    </navigator>
+    <navigator class="" target="" url="/pages/masonry-layout/index" open-type="navigate">
+      <button size="default">masonry-layout</button>
+    </navigator>
+    <navigator class="" target="" url="/pages/masonry-layout-v1/index" open-type="navigate">
+      <button size="default">masonry-layout-v1</button>
+    </navigator>
+    <navigator class="" target="" url="/pages/ul-li/index" open-type="navigate">
+      <button size="default">ul-li</button>
+    </navigator>
   </view>
 </view>

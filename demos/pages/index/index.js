@@ -1,4 +1,29 @@
 //index.js
+import { getValueFromListByFilter } from '../../utils/arrray.js';
+
+const mockList = [
+  {
+    a: 1,
+    b: 1,
+  },
+  {
+    a: 2,
+    b: 3,
+  },
+  {
+    a: 3,
+    b: 7,
+  },
+  {
+    a: 3,
+    b: 6,
+    c: '777'
+  },
+  {
+    a: 4,
+    b: 0,
+  },
+]
 //获取应用实例
 const app = getApp()
 
@@ -16,6 +41,7 @@ Page({
     })
   },
   onLoad: function () {
+    console.log('ddd:', getValueFromListByFilter(mockList, { a: 3, b: 6 }, 'c'))
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

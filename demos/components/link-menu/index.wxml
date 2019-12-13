@@ -1,0 +1,32 @@
+<view class="link-tab" >
+  <view class="tab-navigation">
+    <scroll-view 
+      class="scroll-view scroll-navigation"
+      scroll-y="{{true}}"
+      scroll-top="{{scrollTop}}"
+    >
+      <slot class="link-left" name="left"></slot>
+    </scroll-view>
+  </view>
+  <view class="tab-content">
+    <scroll-view
+      class="scroll-view scroll-content"
+      scroll-y="{{true}}"
+      scroll-with-animation="{{true}}"
+      scroll-into-view="{{activatedContId}}"
+      bindscroll="onTabContentScroll"
+    >
+     <slot name="right"></slot>
+      <view 
+        id="cont-{{index}}"
+        class="content-item"
+        wx:for="{{list}}"
+        wx:key="index"
+        data-index="{{index}}"
+      >
+        <view class="content-item-title" id="title-{{index}}">{{index}}{{item.content}}</view>
+        <view class="content-item-body">{{item.content}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

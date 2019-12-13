@@ -1,0 +1,12 @@
+.g-container {
+  position: relative;
+  /* column-count: 2; */
+  /* row-gap: 50rpx; */
+  /* column-gap: .5vw;
+  padding-top: .5vw; */
+}
+.list-item {
+  position: absolute;
+  width: 48vw;
+  padding-bottom: 1vh;
+}

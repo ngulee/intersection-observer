@@ -1,0 +1,9 @@
+/* pages/exposure-demos/index.wxss */
+.product-item {
+  margin-bottom: 20rpx;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid red;
+}

@@ -1,0 +1,3 @@
+<view class="exposure-control" bind:tap="onTap">
+  <slot ></slot>
+</view>

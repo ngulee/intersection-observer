@@ -1,0 +1,52 @@
+
+
+.masonry {
+  column-count: 2;
+  column-gap: 0;
+  counter-reset: item-counter;
+}
+
+.item {
+  box-sizing: border-box;
+  break-inside: avoid;
+  padding: 10px;
+  counter-increment: item-counter;
+}
+
+.item__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.05);
+  background: currentColor;
+  box-sizing: border-box;
+}
+
+.item__content--small {
+  height: 100px;
+  background: #CE4257;
+}
+
+.item__content--small::after {
+  content: '♥◡♥';
+}
+.item__content--medium {
+  height: 175px;
+  background: #FFC093;
+}
+
+.item__content--medium::after {
+  content: '◔ᴗ◔';
+}
+.item__content--large {
+  height: 280px;
+  background: #FF7F51;
+}
+
+.item__content--large::after {
+  content: 'ಠ_๏';
+}

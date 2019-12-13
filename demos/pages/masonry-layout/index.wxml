@@ -1,0 +1,78 @@
+<view class="masonry">
+  <view class="item">
+    <view class="item__content">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--small">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--medium">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--small">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--medium">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--large">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--medium">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--small">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--large">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--small">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--large">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--medium">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--small">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--medium">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content">
+    </view>
+  </view>
+  <view class="item">
+    <view class="item__content item__content--small">
+    </view>
+  </view>
+</view>

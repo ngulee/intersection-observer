@@ -1,0 +1,11 @@
+<view class="g-container">
+  <view
+    class="list-item list-item-{{item.classIndex}}"
+    wx:for="{{list}}"
+    style="{{item.position}}:0;top:{{item.top * 2}}rpx;"
+  >
+    <view style="height:{{item.height}};background:{{item.background}};">
+      {{item.value}}
+    </view>
+  </view>
+</view>

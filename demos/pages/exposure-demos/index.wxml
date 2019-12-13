@@ -1,0 +1,11 @@
+<view >
+  <exposure-control 
+    wx:for="{{products}}"
+    wx:for-item="product"
+    wx:key="index" 
+    class="demos"
+    name="{{product}}"
+  >
+    <view class="product-item">product-{{index + 1}}</view>
+  </exposure-control>
+</view>

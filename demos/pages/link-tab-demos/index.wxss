@@ -1,0 +1,12 @@
+/* pages/link-tab-demos/index.wxss */
+.navigation-item {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-size: 28rpx;
+  
+  height: 120rpx;
+  line-height: 120rpx;
+}

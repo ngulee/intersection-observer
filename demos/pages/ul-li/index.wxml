@@ -1,0 +1,10 @@
+<view >
+  <custom-ul>
+    <custom-li>
+      <view >li-1</view>
+    </custom-li>
+    <custom-li-v>
+      <view >li-v1</view>
+    </custom-li-v>
+  </custom-ul>
+</view>

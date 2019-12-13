@@ -1,0 +1,4 @@
+<view class="custom-li">
+  <slot ></slot>
+  <view >{{name}}</view>
+</view>

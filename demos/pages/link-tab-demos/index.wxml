@@ -1,0 +1,17 @@
+<view class="">
+  <link-menu id="link" list="{{list}}">
+    <view class="link-left" slot="left">
+      <nav-item
+        wx:for="{{list}}"
+        wx:key="index"
+        id="nav-{{index}}"
+        data-index="{{index}}"
+      >
+        <view 
+          class="navigation-item {{activatedNavId === ('nav-' + index) ? 'navigation-item_active' : ''}}"
+        >{{index}}{{item.title}}</view>
+      </nav-item>
+    </view>
+    <view slot="right">cccccc</view>
+  </link-menu>
+</view>

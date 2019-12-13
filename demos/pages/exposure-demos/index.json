@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "exposure-control": "../../components/exposure-control/index"
+  },
+  "navigationStyle": "custom"
+}
