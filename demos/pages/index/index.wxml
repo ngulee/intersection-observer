@@ -22,5 +22,11 @@
     <navigator class="" target="" url="/pages/ul-li/index" open-type="navigate">
       <button size="default">ul-li</button>
     </navigator>
+    <navigator class="" target="" url="/pages/waterfall-demos/index" open-type="navigate">
+      <button size="default">waterfall</button>
+    </navigator>
+    <navigator class="" target="" url="/pages/waterfall-v1/index" open-type="navigate">
+      <button size="default">waterfall-v1</button>
+    </navigator>
   </view>
 </view>

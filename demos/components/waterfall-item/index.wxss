@@ -1,0 +1,5 @@
+.waterfall-item {
+  position: absolute;
+  width: 48vw;
+  border: 1px solid #000;
+}

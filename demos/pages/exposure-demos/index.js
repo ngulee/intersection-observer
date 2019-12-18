@@ -53,7 +53,6 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log('onHide');
     this.exposureObser.disconnect();
     this.exposureObser = null;
     this.exposuredElements = new Map();
@@ -102,29 +101,35 @@ Page({
         .relativeToViewport()
         .observe('.data-exposure-analysis', (target) => {
           const { intersectionRatio } = target;
-          const { exposureAction: {
-            logCode,
-          } } = target.dataset;
+          const { exposureOptions } = target.dataset;
 
-          if (logCode && intersectionRatio >= 1 && !this.exposuredElements.has(logCode)) {
+          if (
+            exposureOptions
+            && intersectionRatio >= 1
+            && !this.exposuredElements.has(JSON.stringify(exposureOptions))
+          ) {
             this.onExposureAnalysisReport(target, 'sp');
           }
         })
   },
 
-  onExposureAnalysisReport({ id, dataset }, type) {
-    // console.log('dataset' + id + ':', dataset)
-    const {
-      exposureAction: {
-        logCode,
-      }
-     } = dataset;
-    this.trackerPush({
-      type,
-      logCode,
-    });
-    this.exposuredElements.set(logCode, true);
-    // console.log('exposuredElements:', this.exposuredElements)
+  onExposureAnalysisReport({ dataset }, type) {
+    const params = {};
+    const { toString } = Object.prototype;
+    const { exposureOptions } = dataset;
+    if (toString.call(exposureOptions) === '[object String]') {
+      Object.assign(params, {
+        type,
+        logCode: exposureOptions,
+      });
+    } else if (toString.call(exposureOptions) === '[object Object]') {
+      Object.assign(params, {
+        ...exposureOptions,
+        type,
+      });
+    }
+    this.trackerPush(params);
+    this.exposuredElements.set(JSON.stringify(exposureOptions), true);
   },
 
   trackerPush(options) {
@@ -132,8 +137,7 @@ Page({
   },
   
 
-  onClickAnalysisReport({ target }) {
-    console.log('target:', target)
+  handleClickAnalysisReport({ target }) {
     this.onExposureAnalysisReport(target, 'tap')
   },
 

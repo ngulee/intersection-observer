@@ -1,0 +1,5 @@
+<waterfall>
+  <waterfall-item wx:for="{{products}}" wx:key="index">
+    <view class="product-item" style="height:{{item.height}}rpx">li-{{index}}</view>
+  </waterfall-item>
+</waterfall>

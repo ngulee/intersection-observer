@@ -1,0 +1,3 @@
+<view class="waterfall-item" style="{{position}}:0;top:{{(top >= 0 ? top : itemCount * 100)}}px;width:{{width}}rpx;">
+  <slot ></slot>
+</view>

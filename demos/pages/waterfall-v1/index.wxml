@@ -1,0 +1,7 @@
+<waterfall 
+  bind:scrolltolower="handleScrollLower"
+>
+  <waterfall-item wx:for="{{products}}" wx:key="index">
+    <view class="product-item" style="height:{{item.height}}rpx">li-{{index + 1}}</view>
+  </waterfall-item>
+</waterfall>

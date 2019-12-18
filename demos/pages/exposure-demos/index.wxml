@@ -1,15 +1,14 @@
-<view bind:tap="onClickAnalysisReport">
+<view bind:tap="handleClickAnalysisReport">
   <view 
     wx:for="{{products}}"
     wx:for-item="product"
     wx:key="index"
     id="{{index}}"
-    class="data-exposure-analysis demos"
-    data-exposure-action="{{product.action}}"
+    class="demos"
     name="{{product}}"
   >
     <navigator url="/pages/wx-key/index">
-      <view data-exposure-action="{{product.action}}" class="product-item">product-{{product.value + 1}}</view>
+      <view data-exposure-options="{{product.action}}" class="data-exposure-analysis product-item">product-{{product.value + 1}}</view>
     </navigator>
   </view>
 </view>

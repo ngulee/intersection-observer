@@ -9,14 +9,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: mockList
+    products: []
   },
+  updatedCount: 0,
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.fetchData()
+  },
 
+  fetchData() {
+    const mockList = [];
+
+    for(let i = 0; i < 20; i++) {
+      const index = i + this.updatedCount * 20
+      let item = {
+        value: index,
+        action: {
+          logCode: `wx#bpm${index}.${index}${index+1}`
+        },
+        height: 100 + Math.random() * 200
+      }
+      mockList.push(item)
+    }
+
+    this.setData({
+      products: this.data.products.concat(mockList),
+    });
+    this.updatedCount += 1;
   },
 
   /**
@@ -58,7 +80,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.fetchData();
   },
 
   /**

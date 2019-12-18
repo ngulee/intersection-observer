@@ -1,0 +1,11 @@
+<scroll-view 
+  class="waterfall {{className}}"
+  scroll-y="{{true}}"
+  upper-threshold="{{upperThreshold}}"
+  lower-threshold="{{lowerThreshold}}"
+  bindscrolltolower="handleScrollBoundary"
+  bindscrolltoupper="handleScrollBoundary"
+>
+  <slot ></slot>
+</scroll-view>
+

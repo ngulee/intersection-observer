@@ -49,47 +49,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 5,
 			"list": [
-				{
-					"id": -1,
-					"name": "intersection-observer",
-					"pathName": "pages/intersection-observer/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 1,
-					"name": "pages/infinite-scroll/index",
-					"pathName": "pages/infinite-scroll/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 2,
-					"name": "scroll-view",
-					"pathName": "pages/scroll-view-infinite-scroll/index",
-					"query": "",
-					"scene": null
-				},
 				{
 					"id": -1,
 					"name": "exposure",
 					"pathName": "pages/exposure-demos/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "ul-li",
-					"pathName": "pages/ul-li/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "link-tab-demos",
-					"pathName": "pages/link-tab-demos/index",
 					"query": "",
 					"scene": null
 				},
@@ -104,6 +69,28 @@
 					"id": -1,
 					"name": "v1",
 					"pathName": "pages/masonry-layout-v1/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "masonry",
+					"pathName": "pages/masonry/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "waterfall",
+					"pathName": "pages/waterfall-demos/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "waterfall-v1",
+					"pathName": "pages/waterfall-v1/index",
+					"query": "",
 					"scene": null
 				}
 			]
