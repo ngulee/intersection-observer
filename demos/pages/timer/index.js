@@ -24,7 +24,7 @@ Page({
   onTimerBegin() {
     this.setData({
       startTime: nowDate,
-      endTime: nowDate + 800
+      endTime: nowDate + 27 * 60 * 60
     })
   },
 
