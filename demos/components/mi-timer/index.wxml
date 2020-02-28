@@ -1,10 +1,11 @@
 <view wx:if="{{timerInfo}}" class="mi-timer">
-  <text wx:if="{{timerInfo.dd}}" class="mi-timer-item" style="{{itemStyle ? itemStyle : ''}}">{{timerInfo.dd}}天</text>
-  <text wx:if="{{timerInfo.hh}}" class="mi-timer-item" style="{{itemStyle ? itemStyle : ''}}" >{{timerInfo.hh}}</text>
-  <text wx:if="{{timerInfo.hh}}" class="mi-timer-separator" style="{{separatorStyle ? separatorStyle : ''}}" >:</text>
-  <text wx:if="{{timerInfo.mm}}" class="mi-timer-item" style="{{itemStyle ? itemStyle : ''}}">{{timerInfo.mm}}</text>
-  <text wx:if="{{timerInfo.mm}}" class="mi-timer-separator" style="{{separatorStyle ? separatorStyle : ''}}">:</text>
-  <text wx:if="{{timerInfo.ss}}" class="mi-timer-item" style="{{itemStyle ? itemStyle : ''}}">{{timerInfo.ss}}</text>
-  <text wx:if="{{timerInfo.ms}}" class="mi-timer-separator" style="{{separatorStyle ? separatorStyle : ''}}">:</text>
-  <text wx:if="{{timerInfo.ms}}" class="mi-timer-item" style="{{itemStyle ? itemStyle : ''}}">{{timerInfo.ms}}</text>
+  <text wx:if="{{timerInfo.dd}}" class="mi-timer-item num-class">{{timerInfo.dd}}天</text>
+  <text wx:if="{{timerInfo.dd}}" class="mi-timer-separator separator-class" >:</text>
+  <text wx:if="{{timerInfo.hh}}" class="mi-timer-item num-class" >{{timerInfo.hh}}</text>
+  <text wx:if="{{timerInfo.hh}}" class="mi-timer-separator separator-class" >:</text>
+  <text wx:if="{{timerInfo.mm}}" class="mi-timer-item num-class">{{timerInfo.mm}}</text>
+  <text wx:if="{{timerInfo.mm}}" class="mi-timer-separator separator-class">:</text>
+  <text wx:if="{{timerInfo.ss}}" class="mi-timer-item num-class">{{timerInfo.ss}}</text>
+  <text wx:if="{{timerInfo.ms}}" class="mi-timer-separator separator-class">:</text>
+  <text wx:if="{{timerInfo.ms}}" class="mi-timer-item num-class">{{timerInfo.ms}}</text>
 </view>

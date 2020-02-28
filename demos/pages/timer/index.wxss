@@ -4,3 +4,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.num-item,
+.separator-item{
+  color: red !important;
+}

@@ -4,12 +4,13 @@
   <button bind:tap="onTimerBegin">重新计时</button>
   <view class="box">
     <mi-timer
-      class="mi-timer"
+      num-class="num-item"
       dateFormat="hh:mm:ss:ms"
       startTime="{{startTime}}"
       endTime="{{endTime}}"
       itemStyle="font-weight:400;"
       bind:onTimeEnd="handleTimeEnd"
-    ></mi-timer>
+    >
+    </mi-timer>
   </view>
 </view>

@@ -9,6 +9,15 @@ const testDataType = function(source, expirationtype) {
   return Object.prototype.toString.call(source).toLowerCase() === validType;
 }
 
+/**
+ * 倒计时模块
+ * 特点：根据 dateFormat 最小单位进行时间计算。
+ * 如要展示的最小单位为毫秒，则每毫秒触发一次计算，并触发onTimeChange回到；
+ * 如要展示的最小单位秒，则每秒触发一次计算，并触发onTimeChange回到；
+ * 如要展示的最小单位分钟，则每秒触发一次计算，并触发onTimeChange回到；
+ * 
+ * 从而最大程度减小页面调用setData的次数，提高页面性能
+ */
 class MiTimer {
   /**
    * MiTimer 倒计时模块构造函数
@@ -93,7 +102,7 @@ class MiTimer {
 
       
 
-      // 如果没有天数，则小时可以超过24小时
+      // 如果不需要展示天数，则小时可以超过24小时
       if (!dd) {
         hour = day * 24 + hour;
       }
@@ -139,6 +148,7 @@ class MiTimer {
         this.timer(surplusTime);
 
       }, this.interval * 1000);
+
     } else {
 
       if (ms === 'ms') {

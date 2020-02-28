@@ -2,6 +2,7 @@ import MiTimer from '../../utils/mi-timer';
 
 
 Component({
+  externalClasses: ['num-class', 'separator-class'],
   /**
    * 组件的属性列表
    */
