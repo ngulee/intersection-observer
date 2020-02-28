@@ -1,0 +1,5 @@
+<view class="b-component">
+  <view >b-component</view>
+  <slot ></slot>
+</view>
+

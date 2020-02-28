@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "componentGenerics": {
+    "abstract": {
+      "default": "../a-component/index"
+    }
+  },
+  "usingComponents": {}
+}

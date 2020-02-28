@@ -49,7 +49,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -90,6 +90,27 @@
 					"id": -1,
 					"name": "waterfall-v1",
 					"pathName": "pages/waterfall-v1/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "abstract-node",
+					"pathName": "pages/abstract-node/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ui-components",
+					"pathName": "pages/ui-components/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "timer",
+					"pathName": "pages/timer/index",
 					"query": "",
 					"scene": null
 				}

@@ -1,0 +1,45 @@
+var formatImageSize = function(imgSrc, width, height) {
+    if (!imgSrc) return '';
+
+    if (!width) return imgSrc;
+
+    var cdbReg = getRegExp('mi-img.com');
+    var mifileReg = getRegExp('mifile.cn');
+    var webpReg = getRegExp('cdn.cnbj1.fds.api.mi-img.com');
+
+    var isCdn = cdbReg.test(imgSrc);
+    var isMifile = mifileReg.test(imgSrc);
+    var isWebpCdn = webpReg.test(imgSrc);
+    var src = imgSrc.split('?')[0];
+    var newsrc = '';
+    var newW = Math.round(width);
+    var newH = height ? Math.round(height) : '';
+
+    if (isCdn) {
+        newsrc = src + '?thumb=1&w=' + newW + '&h='+ newH;
+    } else if (isMifile) {
+        if (!newH) {
+            newH = newW;
+        }
+        var suffix = src.substring(src.lastIndexOf('.') + 1);
+        var prefix = src.substring(0, src.lastIndexOf('.'));
+        newsrc = prefix + '!' + newW + 'x' + newH + '.' + suffix;
+    } else {
+        newsrc = imgSrc;
+    }
+
+    // 仅 cdn.cnbj1 支持 webp
+    if (isWebpCdn) { 
+        // newsrc += '&f=webp&q=90';
+    }
+
+    return newsrc;
+
+}
+
+ 
+module.exports = {
+  formatImageSize: formatImageSize
+};
+
+ 

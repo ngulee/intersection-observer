@@ -27,3 +27,6 @@ button {
 .usermotto {
   margin-top: 200px;
 }
+navigator {
+  margin-bottom: 20rpx;
+}

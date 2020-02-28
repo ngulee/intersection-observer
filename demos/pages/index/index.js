@@ -1,5 +1,5 @@
 //index.js
-import { getValueFromListByFilter } from '../../utils/arrray.js';
+import { getValueFromArray } from '../../utils/arrray.js';
 
 const mockList = [
   {
@@ -32,7 +32,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    imgSrc: 'https://i8.mifile.cn/webfile/h5/weixin/20200103/show_more_icon.png',
   },
   //事件处理函数
   bindViewTap: function() {
@@ -41,7 +42,7 @@ Page({
     })
   },
   onLoad: function () {
-    console.log('ddd:', getValueFromListByFilter(mockList, { a: 3, b: 6 }, 'c'))
+    console.log('ddd:', getValueFromArray(mockList, { a: 3, b: 6 }, 'c'))
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -76,5 +77,48 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  handleSave() {
+    const _this = this;
+
+    wx.showLoading();
+
+    let saveCallback = (isSuccessed) => {
+      if (isSuccessed) {
+        wx.showToast({
+          title: '图片已保存，赶快分享吧',
+          icon: 'none',
+          duration: 2000
+        });
+        this.triggerEvent('success', null)
+      } else {
+        wx.showToast({
+          title: '保存失败',
+          icon: 'none',
+          duration: 1000
+        });
+        this.triggerEvent('failed', null)
+      }
+    };
+
+    wx.downloadFile({
+      url: /^http:/.test(_this.data.imgSrc) ? _this.data.imgSrc.replace(/^http/, 'https') : _this.data.imgSrc,
+      success: (res) => {
+        let path = res.tempFilePath;
+        wx.hideLoading();
+        wx.saveImageToPhotosAlbum({
+          filePath: path,
+          success() {
+            saveCallback(true);
+          },
+          fail() {
+            saveCallback(false);
+          }
+        })
+      },
+      fail: () => {
+        saveCallback(false);
+      }
+    });
   }
 })

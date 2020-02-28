@@ -1,19 +1,30 @@
 
+const POSITION_LEFT = 'left';
+const POSITION_RIGHT = 'right';
+
 Component({
   properties: {
     className: {
       type: String,
       value: '',
     },
+    width: {
+      type: [Number, String],
+      value: '100vw',
+    },
+    height: {
+      type: [Number, String],
+      value: '100vh',
+    },
     upperThreshold: {
       type: [Number, String],
-      value: 50,
+      value: 100,
     },
     lowerThreshold: {
       type: [Number, String],
-      value: 50,
+      value: 100,
     },
-    rowsGap: {
+    rowGap: {
       type: Number,
       value: 10,
     }
@@ -24,14 +35,12 @@ Component({
     },
   },
   data: {
-    name: 'ul',
-    itemMapPosition: [],
+    
   },
 
   scaling: 2,
 
   childCount: 0,
-  itemsPosition: [],
   leftHeights: 0,
   rightHeights: 0,
 
@@ -40,9 +49,7 @@ Component({
       this.getDeviceScaling();
     },
     ready() {
-      const nodes = this.getRelationNodes('./waterfall-item');
       this.childCount = 0;
-      this.itemsPosition = [];
       this.leftHeights = 0;
       this.rightHeights = 0;
     }
@@ -52,6 +59,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    /**
+     * 获取具体设备的缩放比例
+     */
     getDeviceScaling() {
       wx.getSystemInfo({
         success: ({ screenWidth })=>{
@@ -61,14 +71,20 @@ Component({
         }
       });
     },
-    getItemHeight(item, callback) {
+  
+    /**
+     * 获取 waterfall-item 的高度值
+     * @param {*} item 
+     * @param {*} callback 
+     */
+    getWaterfallItemPostionInfo(item, callback) {
 
-      const { rowsGap } = this.properties;
+      const { rowGap } = this.properties;
 
       let top = 0;
-      let position = 'left';
+      let position = POSITION_LEFT;
       const { height } = item;
-      const rows_gap = (rowsGap * 2 / this.scaling);
+      const row_gap = (rowGap * 2 / this.scaling);
 
       if (this.leftHeights <= this.rightHeights) {
         top = this.leftHeights;
@@ -76,37 +92,26 @@ Component({
         if(this.leftHeights === 0) {
           this.leftHeights += height;
         } else {
-          top += rows_gap;
-          this.leftHeights += height + rows_gap;
+          top += row_gap;
+          this.leftHeights += height + row_gap;
         }
-       
-        this.itemsPosition.push({
-          position: 'left',
-          top: this.leftHeights,
-        })
       } else {
-        position = 'right';
+        position = POSITION_RIGHT;
         top = this.rightHeights;
 
         if(this.rightHeights === 0) {
           this.rightHeights += height;
         } else {
-          top += rows_gap;
-          this.rightHeights += height + rows_gap;
+          top += row_gap;
+          this.rightHeights += height + row_gap;
         }
-
-        this.itemsPosition.push({
-          position: 'right',
-          top: this.rightHeights,
-        });
-        
       }
 
       callback && callback(position, top);
     },
+  
     handleScrollBoundary(e) {
       const {type, ...others } = e;
-      console.log('e:', e)
       this.triggerEvent(type, others)
     }
   }

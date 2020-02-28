@@ -1,3 +1,4 @@
 .waterfall-item {
+  box-sizing: border-box;
   position: absolute;
 }

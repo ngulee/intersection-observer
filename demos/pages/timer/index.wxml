@@ -1,0 +1,15 @@
+<view >
+  <button bind:tap="onPaused">暂定计时</button>
+  <button bind:tap="onRestart">继续计时</button>
+  <button bind:tap="onTimerBegin">重新计时</button>
+  <view class="box">
+    <mi-timer
+      class="mi-timer"
+      dateFormat="hh:mm:ss:ms"
+      startTime="{{startTime}}"
+      endTime="{{endTime}}"
+      itemStyle="font-weight:400;"
+      bind:onTimeEnd="handleTimeEnd"
+    ></mi-timer>
+  </view>
+</view>

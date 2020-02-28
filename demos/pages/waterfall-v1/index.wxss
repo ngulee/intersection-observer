@@ -1,7 +1,14 @@
+.waterfall-page-wrapper {
+  margin: 0 auto;
+  width: 95vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+}
 .product-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #000;
   border-radius: 10rpx;
+  color: #fff;
 }

@@ -1,0 +1,11 @@
+<view class="abstract-node">
+  <abstract-component generic:abstract="a-component">
+    <abstract-component generic:abstract="b-component"></abstract-component>
+  </abstract-component>
+  
+  <a-component>
+    <b-component></b-component>
+  </a-component>
+  
+  <abstract-component></abstract-component>
+</view>

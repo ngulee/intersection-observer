@@ -1,7 +1,15 @@
-<waterfall 
-  bind:scrolltolower="handleScrollLower"
->
-  <waterfall-item wx:for="{{products}}" wx:key="index">
-    <view class="product-item" style="height:{{item.height}}rpx">li-{{index + 1}}</view>
-  </waterfall-item>
-</waterfall>
+<view class="waterfall-page-wrapper">
+  <view >
+    dfdfd
+  </view>
+  <waterfall 
+    width="95vw"
+    height="90vh"
+    bind:scrolltolower="handleScrollLower"
+  >
+    <waterfall-item wx:for="{{products}}" wx:key="index" width="{{350}}">
+      <view class="product-item" style="height:{{item.height}}rpx;background:{{item.background}};" bind:tap="onTap">li-{{index + 1}}</view>
+    </waterfall-item>
+  </waterfall>
+
+</view>

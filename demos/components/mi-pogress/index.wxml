@@ -1,0 +1,20 @@
+<wxs src="../../wxs/formatImageSize.wxs" module="tool"></wxs>
+<view class="mi-progress-outer" style="height:{{iconSrc ? iconHeight : height}}rpx;width:{{width}}rpx;">
+  <view class="mi-progress-wrapper" style="height:{{height}}rpx;width:{{width}}rpx;">
+    <view class="mi-progress" style="background-color:{{backgroundColor}};height:{{height}}rpx;">
+      <view class="current-progress-wrapper">
+        <view class="current-progress" style="background:{{color}};width:{{value}}%;"></view>
+        <view class="icon-wrapper" style="width:{{value + 3}}%;">
+          <image 
+            wx:if="{{iconSrc}}"
+            class="icon"
+            src="{{tool.formatImageSize(iconSrc, iconWidth * 2, iconHeight * 2)}}"
+            style="width:{{iconWidth}}rpx;height:{{iconHeight}}rpx;top:-{{iconHeight / 2}}rpx"
+        />
+        </view>
+      </view>
+      
+      <view class="current-value" style="height:{{height}}rpx;line-height:{{height}}rpx;">{{progressValue}}%</view>
+    </view>
+  </view>
+</view>

@@ -1,3 +1,7 @@
+const randomNumer = function(min, range) {
+  return Math.floor(min + Math.random() * range);
+}
+
 const mockList = [];
 
 for(let i = 0; i < 100; i++) {
@@ -21,6 +25,7 @@ Page({
   },
 
   fetchData() {
+    if (this.updatedCount > 3) return;
     const mockList = [];
 
     for(let i = 0; i < 20; i++) {
@@ -30,7 +35,8 @@ Page({
         action: {
           logCode: `wx#bpm${index}.${index}${index+1}`
         },
-        height: 100 + Math.random() * 200
+        height: 100 + Math.random() * 200,
+        background: `rgb(${randomNumer(0, 100)},${randomNumer(0, 100)}, ${randomNumer(0, 100)})`
       }
       mockList.push(item)
     }
@@ -53,6 +59,22 @@ Page({
    */
   onShow: function () {
 
+  },
+  onTap() {
+    wx.showModal({
+      title: 'Title',
+      content: 'content',
+      success({ confirm, cancel }) {
+        if (confirm) {
+          console.log('success');
+        }
+
+        if(cancel) {
+          console.log('cancel');
+        }
+        
+      }
+    })
   },
 
   /**

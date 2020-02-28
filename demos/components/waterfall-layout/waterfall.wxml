@@ -1,5 +1,6 @@
 <scroll-view 
   class="waterfall {{className}}"
+  style="height:{{height}};width:{{width}};"
   scroll-y="{{true}}"
   upper-threshold="{{upperThreshold}}"
   lower-threshold="{{lowerThreshold}}"

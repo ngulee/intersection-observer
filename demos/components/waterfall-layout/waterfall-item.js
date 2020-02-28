@@ -1,8 +1,6 @@
 import { querySelector } from './query-node';
-import { relationBehavior } from './behaviors';
 
 Component({
-  behaviors: [relationBehavior],
   relations: {
     './waterfall': {
       type: 'parent',
@@ -40,7 +38,7 @@ Component({
         itemCount: itemCount + customUl.childCount,
       })
 
-      this.getMasonryItemBoundingClient()
+      this.setWaterfallItemPosition();
     },
   },
 
@@ -48,11 +46,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    getMasonryItemBoundingClient() {
+    setWaterfallItemPosition() {
       const _this = this;
       querySelector('.waterfall-item', this)
         .then((node) => {
-          this.parent.getItemHeight(node, (position, top) => {
+          this.parent.getWaterfallItemPostionInfo(node, (position, top) => {
             _this.setData({
               top,
               position

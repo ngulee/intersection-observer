@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "abstract-component": "../../components/abstract-component/index",
+    "a-component": "../../components/a-component/index",
+    "b-component": "../../components/b-component/index"
+  }
+}

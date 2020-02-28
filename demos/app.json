@@ -8,7 +8,10 @@
     "pages/link-tab-demos/index",
     "pages/wx-key/index",
     "pages/masonry-layout/index",
-    "pages/masonry-layout-v1/index"
+    "pages/masonry-layout-v1/index",
+    "pages/abstract-node/index",
+    "pages/ui-components/index",
+    "pages/timer/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

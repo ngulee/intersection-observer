@@ -28,5 +28,15 @@
     <navigator class="" target="" url="/pages/waterfall-v1/index" open-type="navigate">
       <button size="default">waterfall-v1</button>
     </navigator>
+    <navigator class="" target="" url="/pages/abstract-node/index" open-type="navigate">
+      <button size="default">abstract-node</button>
+    </navigator>
+    <navigator class="" target="" url="/pages/ui-components/index" open-type="navigate">
+      <button size="default">ui-components</button>
+    </navigator>
+    <button size="default" bindtap="handleSave">保存图片</button>
+    <navigator class="" target="" url="/pages/timer/index" open-type="navigate">
+      <button size="default">timer</button>
+    </navigator>
   </view>
 </view>

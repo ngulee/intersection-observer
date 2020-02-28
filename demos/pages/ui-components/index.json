@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "mi-progress": "/components/mi-pogress/index"
+  }
+}

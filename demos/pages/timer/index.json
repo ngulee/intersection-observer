@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "mi-timer": "../../components/mi-timer/index"
+  }
+}
